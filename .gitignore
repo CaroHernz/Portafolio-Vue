@@ -37,3 +37,8 @@ Thumbs.db
 .firebaserc
 firebase-debug.log
 *.firebase*
+.dataconnect
+dataconnect/
+.dataconnect/
+**/.dataconnect/
+firebase.json
