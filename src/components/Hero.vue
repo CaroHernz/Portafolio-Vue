@@ -1,22 +1,22 @@
 <template>
   <div class="hero">
-    <section v-if="variant === 'main'" class="hero-section-main has-text-right">
-      <div class="columns">
-        <div class="hero-content column pr-3">
+    <section v-if="variant === 'main'" class="hero-section-main">
+      <div class="columns is-variable is-2-mobile hero-section mx-0">
+        <div class="hero-content column is-8-tablet is-12-mobile pr-3">
             <div class=" has-text-weight-bold has-text-grey hero-title">
               Hola! <span class='has-text-info-50'>Soy Carolina</span>
             </div>
-            <div class="  has-text-weight-semibold has-text-info-30 hero-subtitle">
+            <div class="has-text-weight-semibold has-text-info-30 hero-subtitle">
               Desarrolladora Front-end
             </div>
-            <small class='has-text-grey-dark'>Nutricionista resolutiva con base en Data Science.
-              <br />Me gusta construir interfaces web funcionales y centradas en el usuario. <br />
-              <router-link class="button has-background-info-50 py-0 mt-2 has-text-info-100 is-rounded has-text-weight-semibold" to="/proyectos">
-                Ver Proyectos Destacados <i class="fa-solid fa-arrow-right-long pl-2"></i>
+            <small class='hero-text has-text-grey-dark'>Me apasiona crear interfaces web <strong class="has-text-info-30">funcionales, accesibles y centradas en las personas</strong> —porque detrás de cada pantalla hay un usuario con necesidades reales.
+              <br>
+              <router-link class="button has-background-info-60 py-0 mt-2 has-text-info-100 is-rounded has-text-weight-semibold" to="/proyectos">
+                Ver Proyectos <i class="fa-solid fa-arrow-right-long pl-2"></i>
               </router-link>
             </small>
           </div>
-          <div class="column-1 hero-content-img">
+          <div class="column is-12-mobile is-4-tablet hero-content-img">
             <img src="/img-perfil3.png" alt="Foto de Perfil" class='hero-img' />
           </div>
       </div>
@@ -52,6 +52,7 @@ defineProps({
   flex-direction: column;
   justify-content: end;
   align-items: center;
+  width: 100%;
 }
 .hero-content {
   line-height: 1.1;
@@ -60,18 +61,22 @@ defineProps({
   padding: 1rem;
 }
 .hero-content-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 5px solid transparent;
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  transition: all 0.3s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .hero-img {
   object-fit: cover;
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease-in;
+  object-fit: cover;
 }
-.hero-content-img:hover , .hero-img-mini:hover{
+.hero-content-img:hover .hero-img, .hero-img-mini:hover{
   transform: rotate(-10deg) translate(-8px,-3px);
   border-color: var(--icon-hover);
 }
@@ -79,13 +84,13 @@ defineProps({
 .hero-title{
   font-family: var(--font-title);
   padding: 0;
-  font-size: 3.6rem;
+  font-size: 3rem;
 }
 
 .hero-subtitle {
   font-family: var(--font-title);
   padding: 0;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
 }
 .hero-content-mini p{
   font-family: var(--font-title);
@@ -99,14 +104,38 @@ defineProps({
   border-radius: 50%;
   transition: all 0.3s ease-in;
 }
+.hero-text {
+  line-height: 1.5;
+}
 @media screen and (max-width: 768px) {
-  .hero-content-img,
-  .hero-img {
-    display: none;
-  }
   .hero-content-mini {
     display: none;
   }
+  .hero-section {
+    position: relative;
+    margin-top: 11rem;
+    text-align: center;
+  }
+  .hero-img {
+    width: 160px;
+    position: absolute;
+    top:-10rem
+  }
+  .hero-title{
+  font-size: 2.5rem;
+}
+.hero-subtitle {
+  font-size: 1.55rem;
+  line-height: 1.5;
+}
+.hero-content {
+  max-width: 500px;
+    display: flex;
+  flex-direction: column;
+}
+.hero-text {
+  line-height: 1.3;
+}
 }
 
 @media screen and (max-width: 480px) {
@@ -114,11 +143,25 @@ defineProps({
   display: flex;
   width: 100%;
   }
-  .hero-title {
-  font-size: 2.5rem;
+  .hero-section {
+    position: relative;
+    margin-top: 9.5rem;
+    text-align: center;
   }
+  .hero-img {
+    width: 160px;
+    position: absolute;
+    top:-10rem
+  }
+  .hero-title{
+  font-size: 2.1rem;
+}
   .hero-subtitle {
-  font-size: 1.5rem;
+  font-size: 1.28rem;
+  }
+  .hero-text {
+    font-size: 0.85rem;
+    line-height: 1.2;
   }
 }
 @media screen and (max-width: 350px) {
@@ -128,5 +171,9 @@ defineProps({
   .hero-subtitle {
   font-size: 1.2rem;
   }
+  .hero-text {
+    font-size: 0.75rem;
+  }
+  
 }
 </style>

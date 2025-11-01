@@ -14,8 +14,8 @@
   </div>
 
   <div v-else class="container">
-    <div v-for="[category, skillsList] in Object.entries(skills)" :key="category" class="mb-5">
-      <div class="is-size-6 is-italic has-text-weight-semibold has-text-grey mb-3">{{ category }}</div>
+    <div v-for="[category, skillsList] in Object.entries(skills)" :key="category" class="skill-container">
+      <div class="is-size-6 title-skills mb-3">{{ category }}</div>
       <div class="field is-grouped is-grouped-multiline is-justify-content-end">
         <div v-for="(skill, index) in skillsList" :key="index" class="control">
           <div class="tags has-addons">
@@ -56,7 +56,8 @@ const skills = {
     { name: 'Vue.js', icon: 'fa-brands fa-vuejs', color: '#4FC08D' },
     { name: 'Bootstrap', icon: 'fa-brands fa-bootstrap', color: '#7952B3' },
     { name: 'Bulma', icon: 'fa-solid fa-b', color: '#00d1b2' },
-    { name: 'TailwindCSS', icon: 'fa-solid fa-wind', color: 'rgb(0,167,187)' }
+    { name: 'TailwindCSS', icon: 'fa-solid fa-wind', color: 'rgb(0,167,187)' },
+    { name: 'daisyUI', icon: 'fa-solid fa-sun', color: 'rgb(236,142,29)' }
   ],
   "Back-End & Bases de Datos": [
     { name: 'Python', icon: 'fa-brands fa-python', color: '#3274c0ff' },
@@ -69,6 +70,7 @@ const skills = {
     { name: 'GitHub', icon: 'fa-brands fa-github', color: '#000000' },
     { name: 'AWS', icon: 'fa-brands fa-aws', color: '#ff9900' },
     { name: 'Firebase', icon: 'fa-solid fa-fire', color: 'rgb(222,44,3)' },
+    { name: 'Docker', icon: 'fa-brands fa-docker', color: 'rgb(31,146,229)' },
   ],
   "Diseño & CMS": [
     { name: 'UI/UX', icon: 'fa-solid fa-icons', color: '#FF26BE' },
@@ -85,6 +87,12 @@ const duplicatedSkills = computed(() => {
 </script>
 
 <style scoped>
+.skill-container {
+  background-color: var(--bg-grey);
+  padding: 0.5rem 1rem 1rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
 .skill-carousel-container {
   max-width: 624px;
   overflow: hidden;
@@ -123,6 +131,12 @@ const duplicatedSkills = computed(() => {
   }
   
 }
+.title-skills{
+  font-family: var(--font-title);
+  font-weight: 500;
+  color:var(--icon-active-text)
+}
+
 .skill-icon-carousel {
   position: relative;
   cursor: pointer;

@@ -12,9 +12,13 @@
           <div class="">
               <div v-for="experiencia in experiencias" :key="experiencias.id" class="columns is-tablet">
                 <div class="experiencia-content column">                  
-                  <div class="experiencia-title has-text-weight-bold has-text-info-45 is-size-3">{{experiencia.title}}</div>
+                  <div class="experiencia-title has-text-weight-bold has-text-info-45 is-size-3 is-size-4-mobile">{{experiencia.title}}</div>
                   <div class="experiencia-subtitle has-text-weight-semibold is-size-5 has-text-info-25">{{experiencia.subtitle}}</div>                  
-                  <div class="experiencia-description has-text-grey is-size-6">{{experiencia.description}}</div>
+                  <ul class="experiencia-description has-text-grey is-size-6">
+                    <li v-for="(item,index) in experiencia.description" :key="index" class="mb-1">
+                      {{ item }}
+                    </li>
+                  </ul>
                 </div>
                 <div class="experiencia-line column-1">
                   <div class="experiencia-dot"></div>
@@ -35,16 +39,14 @@ const experiencias = [
     {
       id: 1,
       title: 'Desarrollador Front-End',
-      subtitle: 'Freelance',
-      description: 'Desarrollo de aplicaciones web usando React.',
-      technologies: ['React', 'CSS3', 'JavaScript', 'Bootstrap', 'Router'],
-      projectUrl: 'https://libro-de-recetas.vercel.app/'
+      subtitle: 'Freelance | 2025 ~',
+      description: ['Desarrollo de aplicaciones web usando React y Vue.js.','Colaboración directa con clientes para entender requisitos y entregar soluciones centradas en el usuario.', 'Implementación de buenas prácticas de accesibilidad y rendimiento', 'Optimización de performance y SEO en proyectos web.']
     },
     {
       id: 2,
       title: 'Nutricionista',
       subtitle: 'Consulta Nutricional - Centro Médico Nueva Salud',
-      description: 'Gestión autónoma de cartera de clientes, demostrando proactividad y organización,Comunicación clara y efectiva para explicar conceptos complejos de manera sencilla, Resolución de problemas personalizados para alcanzar los objetivos de cada paciente. Atención al detalle en el seguimiento y análisis de progresos'    
+      description: ['Gestión autónoma de cartera de clientes, demostrando proactividad y organización.','Comunicación clara y efectiva para explicar conceptos complejos de manera sencilla.','Resolución de problemas personalizados para alcanzar los objetivos de cada paciente.','Atención al detalle en el seguimiento y análisis de progresos.','Análisis de datos de pacientes para entregar un tratamiento asertivo y personalizado.']
     }
 ]
 </script>
@@ -52,6 +54,9 @@ const experiencias = [
 .experiencia-line {
   background-color: var(--icon-active);
   width: 3px; 
+}
+.experiencia-subtitle, .experiencia-description {
+  text-align: left;
 }
 .experiencia-dot {
   width: 12px;

@@ -3,7 +3,7 @@
     <div class="container">
       <div class="banner-content">
         <span class="banner-text">
-          <span class="icon has-text-warning-80">
+          <span class="icon welcome-name">
             <i class="fa-regular fa-smile-wink"></i>
           </span>
           ¡Hola <strong class="welcome-name">{{ getUserName }}</strong>! 
@@ -67,5 +67,35 @@ const handleLogout = async () => {
   .banner-text {
     font-size: 0.9rem;
   }
+}
+@media screen and (max-width: 480px) {
+  .top-welcome-banner {
+  position: absolute;
+  height: 112px;
+  background: linear-gradient(170deg, rgba(122, 215, 255, 0.8) 0%,  #9f9f9f60 90%);
+  color:var(--text-secondary)
+}
+.welcome-name {
+  color: var(--text-accent)
+}
+  .banner-content {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .banner-text {
+    position: relative;
+    font-size: 0.9rem;
+    top:4.5rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  .banner-content {
+    padding: 0 10px;
+  }
+  .banner-text {
+    font-size: 0.84rem;
+  }
+  
 }
 </style>

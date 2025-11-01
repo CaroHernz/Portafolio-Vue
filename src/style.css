@@ -3,6 +3,8 @@
 
 :root {
   --off-white: #f5f5f5;
+  --bg-color: rgb(244,244,246);
+  --bg-grey:rgb(235, 235, 235);
   --grey-line: rgb(220, 220, 220);
   --text-color: #333333;
   --text-accent:rgb(0,179,253);
@@ -24,6 +26,7 @@ main {
   width: 100%;
   min-height: 100vh;
   color: var(--text-color);
+  background-color: var(--bg-color);
 }
 .page-content {
   padding: 3rem;
@@ -70,13 +73,16 @@ main {
   margin-top: 5rem;
   z-index: 100;
 }
+.title-section {
+  color:var(--text-accent)
+}
+.text-bold {
+  color:var(--icon-active-text)
+}
 
 @media screen and (max-width: 768px) {
   .page-content {
     padding: 6rem 3rem 1rem 3rem;
-  }
-  .title-inicio {
-    font-size: 72px;
   }
   .title-content {
     display:none;
@@ -107,33 +113,22 @@ main {
     color:var(--icon-active-text);
     z-index: 2;
   }
-  .inicio-content {
-    text-align: center;
-    display:flex;
-    flex-direction: column;
-    position: relative;
-    max-width: 500px;
-  }
+  
   .text-content {
     margin-top: 0;
-    text-align: justify;
+    text-align: start;
+  }
+  .content {
+    width: 100%;
   }
 }
 
 .field .input:focus ~ .icon.is-left {
   color: #209cee !important;
 }
-.contacto-links i {
-  color: var(--icon-active-text);
-  transition: all 0.3s ease;
-}
-.contacto-links i:hover {
-  color: var(--text-accent);
-  transform: rotate(-20deg) translate(-3px,-2px);
-}
 
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
   .page-content {
   padding: 4rem 1rem;
 }
@@ -141,7 +136,10 @@ main {
   padding: 1rem;
   max-width: 450px;
 }
-.title-inicio {
-  font-size: 60px;
 }
+@media screen and (max-width: 350px) {
+  .page-content {
+    padding: 4rem 0.3rem;
+  }
+  
 }

@@ -3,10 +3,16 @@ import { ref, watch, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
+import { useAuthStore } from '@/stores/auth'
+import AuthModal from '@/components/AuthModal.vue'
+import WelcomeBanner from '@/components/Welcome.vue'
+
 import './style.css'
 
 const route = useRoute()
 const router = useRouter()
+const authStore = useAuthStore()
+const showAuthModal = ref(false)
 
 const navHistory = ref([])
 const transitionName = ref('slide-left')
@@ -41,9 +47,11 @@ watch(() => route.path, (newPath, oldPath) => {
 </script>
 
 <template>
-  <div class="app-container has-background-white-ter">
-    <Navbar />
-    
+  <div class="app-container">
+    <Navbar @open-auth-modal="showAuthModal = true"/>
+    <AuthModal v-model="showAuthModal" />
+    <WelcomeBanner v-if="authStore.user && authStore.userData" />
+
     <main class="page-content">
       <router-view v-slot="{ Component, route }">
         <transition :name="transitionName" mode="out-in">
