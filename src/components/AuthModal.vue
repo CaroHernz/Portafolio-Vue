@@ -151,6 +151,7 @@ watch(() => props.modelValue, (newValue) => {
 <style scoped>
 .modal {
   z-index: 1001;
+  
 }
 .modal-card {
   max-width: 450px;

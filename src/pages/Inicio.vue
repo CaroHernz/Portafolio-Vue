@@ -10,7 +10,7 @@
             <a class="button is-rounded is-grey has-text-info-40" href="mailto:carolina.fhb@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-at fa-lg pr-1"></i> Escríbeme</a>
             <a class="button is-rounded is-grey has-text-info-40" href="https://www.linkedin.com/in/carolinahernandezbarra/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin fa-lg pr-1"></i> Conectemos</a>
             <a class="button is-rounded is-grey has-text-info-40" href="https://github.com/CaroHernz" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github fa-lg pr-1"></i> Mi Código</a>
-            <a class="button is-rounded is-grey has-text-info-40" href="" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-import fa-lg pr-1"></i> Ver CV</a>
+            <a class="button is-rounded is-grey has-text-info-40" href="https://drive.google.com/file/d/1UIQHIr5qv4DykueFbO7569vFObe9Qy-A/view?usp=sharing" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-import fa-lg pr-1"></i> Ver CV</a>
             <a class="button is-rounded is-grey has-text-info-40" href="/proyectos" rel="noopener noreferrer"><i class="fa-solid fa-folder-open fa-lg pr-1"></i> Ver Proyectos</a>
             <a class="button is-rounded is-grey has-text-info-40" href="https://wa.me/56978903516" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp fa-lg pr-1"></i> Hablemos</a>
           </div>

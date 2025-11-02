@@ -13,6 +13,7 @@
       <div class="contacto-links buttons py-1 is-justify-content-right">
         <a class="contacto-link" href="https://www.linkedin.com/in/carolinahernandezbarra/" target="_blank" rel="noopener noreferrer" data-tooltip="Linkedin"><i class="fa-brands fa-linkedin fa-2xl mr-4"></i></a>
         <a href="https://github.com/CaroHernz" target="_blank" class="contacto-link" rel="noopener noreferrer" data-tooltip="GitHub" ><i class="fa-brands fa-github fa-2xl mr-4"></i></a>
+        <a href="https://drive.google.com/file/d/1UIQHIr5qv4DykueFbO7569vFObe9Qy-A/view?usp=sharing" target="_blank" class="contacto-link" rel="noopener noreferrer" data-tooltip="Currículum"><i class="fa-solid fa-file-export fa-2xl mr-4"></i></a>
         <a href="mailto:carolina.fhb@gmail.com" target="_blank" class="contacto-link" rel="noopener noreferrer" data-tooltip="Correo"><i class="fa-solid fa-envelope fa-2xl mr-4"></i></a>
         <a href="https://wa.me/56978903516" target="_blank" class="contacto-link" rel="noopener noreferrer" data-tooltip="WhatsApp"><i class="fa-brands fa-whatsapp fa-2xl mr-4"></i></a>
       </div>

@@ -55,6 +55,10 @@
         <Skills />
       </div>
     </div>
+    <div class="mt-3 has-text-centered">
+      <a class="button is-rounded is-grey has-text-info-40" href="/estudios" target="">Ver Mis Estudios <i class="fa-solid"></i></a>
+      <a class="button is-rounded is-grey has-text-info-40 ml-3" href="/experiencia" target="">Ver Mi Experiencia <i class="fa-solid fa-arrow-right fa-lg pl-1"></i></a>
+    </div>
     <div class="mt-6">
       <Hero />
     </div>

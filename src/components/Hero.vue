@@ -11,9 +11,7 @@
             </div>
             <small class='hero-text has-text-grey-dark'>Me apasiona crear interfaces web <strong class="has-text-info-30">funcionales, accesibles y centradas en las personas</strong> —porque detrás de cada pantalla hay un usuario con necesidades reales.
               <br>
-              <router-link class="button has-background-info-60 py-0 mt-2 has-text-info-100 is-rounded has-text-weight-semibold" to="/proyectos">
-                Ver Proyectos <i class="fa-solid fa-arrow-right-long pl-2"></i>
-              </router-link>
+              <a class="button is-rounded is-info has-text-info-100 py-1" href="/proyectos" rel="noopener noreferrer">Ver Mis Proyectos <i class="fa-solid fa-arrow-right fa-lg ml-2"></i></a>
             </small>
           </div>
           <div class="column is-12-mobile is-4-tablet hero-content-img">

@@ -26,6 +26,10 @@
               </div>
           </div>
         </section>
+    <div class="mt-3 has-text-centered">
+      <a class="button is-rounded is-grey has-text-info-40" href="/estudios" target=""><i class="fa-solid fa-arrow-left fa-lg pr-1"></i>Ver Mis Estudios</a>
+      <a class="button is-rounded is-grey has-text-info-40 ml-3" href="/proyectos" target="">Ver Mis Proyectos <i class="fa-solid fa-arrow-right fa-lg pl-1"></i></a>
+    </div>
       </div>
       <div class="mt-6">
         <Hero/>
@@ -44,8 +48,15 @@ const experiencias = [
     },
     {
       id: 2,
+      title: 'Docente Instituto Profesional',
+      subtitle: 'IPChile sede Rancagua | 2020 ~ 2022',
+      description: ['Diseño y planificación de clases sobre temas especializados.',
+      'Elaboración de material educativo.','Acompañamiento estudiantil, fomento de pensamiento crítico y resolución de casos clínicos.','Uso de plataformas digitales (Google, Moodle) para la gestión de contenidos y retroalimentación.']
+    },
+    {
+      id: 3,
       title: 'Nutricionista',
-      subtitle: 'Consulta Nutricional - Centro Médico Nueva Salud',
+      subtitle: 'Consulta Nutricional | 2017 ~ 2025',
       description: ['Gestión autónoma de cartera de clientes, demostrando proactividad y organización.','Comunicación clara y efectiva para explicar conceptos complejos de manera sencilla.','Resolución de problemas personalizados para alcanzar los objetivos de cada paciente.','Atención al detalle en el seguimiento y análisis de progresos.','Análisis de datos de pacientes para entregar un tratamiento asertivo y personalizado.']
     }
 ]
